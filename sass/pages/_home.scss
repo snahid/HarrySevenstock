@@ -1860,6 +1860,17 @@ body {
   }
 }
 
+
+.map-section{
+  position: relative;
+  // min-height: 100vh;
+  // max-height: 969px;
+  background-image: url("../assets/images/section-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 // Map Section 
 
 
