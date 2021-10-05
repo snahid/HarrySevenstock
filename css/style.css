@@ -674,6 +674,7 @@ body {
   }
 }
 .myheader .middle-part .image-wrapper .left .mybutton a {
+  position: relative;
   text-decoration: none;
   padding: 16px 46px;
   background: linear-gradient(96.04deg, var(--c1, #A80304), var(--c2, #CF393A) 51%, var(--c1, #a10707)) var(--x, 0)/200%;
@@ -686,6 +687,23 @@ body {
   transition: 0.5s ease;
   height: 64px;
   width: 259px;
+}
+.myheader .middle-part .image-wrapper .left .mybutton a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8%;
+  height: 100%;
+  -webkit-transform: rotate(25deg);
+  -ms-transform: rotate(25deg);
+  transform: rotate(25deg);
+  background: #fff;
+  opacity: 0.3;
+  -webkit-filter: blur(6px);
+  filter: blur(6px);
+  -webkit-animation: anim 2s linear infinite;
+  animation: anim 2s linear infinite;
 }
 @media (max-width: 1152px) {
   .myheader .middle-part .image-wrapper .left .mybutton a {

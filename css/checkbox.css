@@ -87,54 +87,36 @@
 
 /* Animation  */
 
-
-
-
-
 @keyframes animate {
-0%{
-  width: 0%
-}
-100%{
-  width: 100%
-}
-}
-
-
-
-
- @keyframes slide{
-  0%{
-    width:0%;
+  0% {
+    width: 0%;
   }
-  50%{
-    width:100%
+  100% {
+    width: 100%;
   }
-  100%{
-    width: 0%
+}
+
+@keyframes slide {
+  0% {
+    width: 0%;
   }
-} 
-
-
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
 
 /* Animation  */
-
-
-
-
 
 .loader {
   position: relative;
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background: linear-gradient(
-    45deg,
-    transparent,
-    transparent 40%,
-    #e5f403
-  );
-  animation: animate 1s linear infinite ;
+  background: linear-gradient(45deg, transparent, transparent 40%, #e5f403);
+  animation: animate 1s linear infinite;
 }
 @keyframes animate {
   0% {
@@ -164,43 +146,31 @@
   left: 0px;
   right: 0px;
   bottom: 0px;
-  background: linear-gradient(
-    45deg,
-    transparent,
-    transparent 40%,
-    #e5f403
-  );
+  background: linear-gradient(45deg, transparent, transparent 40%, #e5f403);
   border-radius: 50%;
   z-index: 1000;
   z-index: 1;
   filter: blur(30px);
 }
 
-
-
-
-
 /* Ripple Effect  */
 @keyframes ripple {
-    0%{
-      width: 0px;
-      height: 0px;
-      opacity: 0.5;
-    }
-    100%{
-      width: 500px;
-      height: 500px;
-      opacity: 0;
-    }
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 0.5;
+  }
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
 }
 /* Ripple Effect  */
 
-
-
 /* Accordion  */
-.accordion-button:not(.collapsed)::after{
+.accordion-button:not(.collapsed)::after {
   background-image: url(../assets/images/accordion-icon.svg);
-  
 }
 /* .accordion-item:not(:first-of-type){
   border: none !important;
@@ -210,9 +180,8 @@
 } */
 /* Accordion  */
 
-
 /* Splide  */
-.splide--ttb>.splide__pagination{
+.splide--ttb > .splide__pagination {
   left: 0;
   right: unset;
   top: 30px;
@@ -220,7 +189,7 @@
   z-index: 5;
   bottom: unset;
 }
-.splide__pagination__page{
+.splide__pagination__page {
   width: 5px;
   height: 10px;
   border-radius: 15px;
@@ -228,19 +197,18 @@
   transition: all 0.3s ease-in-out;
 }
 
-@media(max-width: 1152px){
-
-  .splide__pagination{
+@media (max-width: 1152px) {
+  .splide__pagination {
     z-index: 4;
   }
-  .splide__pagination__page{
+  .splide__pagination__page {
     width: 10px;
     height: 5px;
     border-radius: 15px;
     margin: 5px 3px;
   }
-  .splide__pagination__page.is-active{
-    background: #A5250A;
+  .splide__pagination__page.is-active {
+    background: #a5250a;
     opacity: 1;
     width: 30px;
     height: 5px !important;
@@ -249,8 +217,8 @@
   }
 }
 
-.splide__pagination__page.is-active{
-  background: #A5250A;
+.splide__pagination__page.is-active {
+  background: #a5250a;
   opacity: 1;
   height: 30px;
   transform: scale(1);
@@ -258,12 +226,23 @@
 }
 /* Splide  */
 
-
-@media(max-width: 425px){
-  .left-posts-s{
+@media (max-width: 425px) {
+  .left-posts-s {
     grid-gap: 10px;
   }
-  .category-box{
+  .category-box {
     grid-gap: 8px;
   }
 }
+
+/* Anim  */
+@keyframes anim {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+/* Anim  */

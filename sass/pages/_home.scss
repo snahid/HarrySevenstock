@@ -249,7 +249,7 @@ body {
             text-decoration: none;
             padding-top: 15px;
             padding-bottom: 15px;
-           
+
           }
         }
       }
@@ -449,6 +449,7 @@ body {
           }
 
           a {
+            position: relative;
             text-decoration: none;
             padding: 16px 46px;
             // background: linear-gradient(96.04deg, #A80304 -5.7%, #CF393A 100.84%);
@@ -462,6 +463,24 @@ body {
             transition: 0.5s ease;
             height: 64px;
             width: 259px;
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 8%;
+              height: 100%;
+              -webkit-transform: rotate(25deg);
+              -ms-transform: rotate(25deg);
+              transform: rotate(25deg);
+              background: #fff;
+              opacity: 0.3;
+              -webkit-filter: blur(6px);
+              filter: blur(6px);
+              -webkit-animation: anim 2s linear infinite;
+              animation: anim 2s linear infinite;
+            }
 
             @media(max-width: 1152px) {
               font-style: normal;
@@ -1661,7 +1680,7 @@ body {
       color: #ffffff;
 
 
-      @media(max-width: 425px){
+      @media(max-width: 425px) {
         width: 100%;
         display: block;
         padding: 14px 0px;
@@ -1678,28 +1697,32 @@ body {
   .mystory-wrapper {
     padding-top: 100px;
 
-    @media(max-width: 1440px){
+    @media(max-width: 1440px) {
       padding-top: 65px;
     }
-    
-    @media(max-width: 1280px){
+
+    @media(max-width: 1280px) {
       padding-top: 60px;
     }
 
-    @media(max-width: 1152px){
+    @media(max-width: 1152px) {
       padding-top: 60px;
     }
+
     .splide {
-      @media(max-width: 575px){
+      @media(max-width: 575px) {
         width: 366px;
         margin: 0 auto;
       }
+
       .splide__track {
         min-height: 775px !important;
         z-index: 3;
-        @media(max-width: 1152px){
+
+        @media(max-width: 1152px) {
           min-height: 300px !important;
         }
+
         .splide__list {
           .splide__slide {
             // height: auto !important;
@@ -1711,20 +1734,21 @@ body {
               min-height: 230px;
               background: #ffffff;
               box-shadow: 0px 26px 49px -15px rgba(0, 0, 0, 0.15);
-              border-radius:8px;
+              border-radius: 8px;
               padding: 20px 20px 0px 20px;
-              margin-left:  auto;
+              margin-left: auto;
               margin-right: auto;
               margin-bottom: 30px;
 
-              @media(max-width: 575px){
+              @media(max-width: 575px) {
                 width: 360px;
               }
 
               img {
                 margin-bottom: 15px;
               }
-              .top-para{
+
+              .top-para {
                 color: #838291;
                 font-size: 17px;
                 font-weight: normal;
@@ -1734,19 +1758,21 @@ body {
                 max-height: 125px;
                 overflow: hidden;
 
-                br{
-                  @media(max-width: 575px){
+                br {
+                  @media(max-width: 575px) {
                     display: none;
                   }
                 }
               }
-              h3{
+
+              h3 {
                 color: #2A263C;
                 font-size: 20px;
                 font-weight: bold;
                 margin-bottom: 5px;
               }
-              .bottom-para{
+
+              .bottom-para {
                 font-size: 15px;
                 color: #6D6B7C;
                 line-height: 23px;
@@ -1861,7 +1887,7 @@ body {
 }
 
 
-.map-section{
+.map-section {
   position: relative;
   // min-height: 100vh;
   // max-height: 969px;
@@ -2066,10 +2092,11 @@ body {
             }
           }
 
-          #footer-company{
+          #footer-company {
             display: none;
             margin-bottom: 83px;
-            a{
+
+            a {
               width: 399px;
               display: block;
               text-decoration: none;
@@ -2086,9 +2113,11 @@ body {
               transition: 0.5s ease;
               color: #ffffff;
               background: linear-gradient(96.04deg, var(--c1, #A80304), var(--c2, #CF393A) 51%, var(--c1, #a10707)) var(--x, 0)/ 200%;
+
               @media(max-width: 414px) {
                 width: 355px;
               }
+
               &:focus {
                 outline: none;
               }
@@ -2097,7 +2126,8 @@ body {
                 --x: 100%;
               }
             }
-            p{
+
+            p {
               color: #ffffff;
               font-size: 14px;
               text-align: right;
