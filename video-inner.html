@@ -63,7 +63,6 @@
   </head>
 
   <body>
-    <div class="wrapper">
     <section>
         <div class="news-header">
             <div class="n-container">
@@ -447,7 +446,6 @@
 
 
       <!-- Footer  -->
-      <footer>
         <div class="myfooter">
           <div class="mycontainer">
             <div class="footer-inner">
@@ -480,23 +478,25 @@
                 </div>
                 <div class="right">
                   <form action="" method="POST">
-                    <input
-                      class="form-control"
-                      type="text"
-                      placeholder="성함"
-                    />
-                    <input
-                      class="form-control"
-                      type="text"
-                      placeholder="핸드폰 번호"
-                    />
+                    <div id="footer-investor">
+                      <input class="form-control" type="text" placeholder="성함" />
+                      <input
+                        class="form-control"
+                        type="text"
+                        placeholder="핸드폰 번호"
+                      />
+                    </div>
+                    <div id="footer-company">
+                      <a href="./contact-us.html">상담문의로 이동</a>
+                      <p>*클릭하시면 '상담문의'로 이동합니다.</p>
+                    </div>
                     <div class="form-box">
-                      <label>
+                      <label id="footer-left-radio">
                         <input type="radio" name="kk" checked />
                         <div class="circle"></div>
                         <span>투자자</span>
                       </label>
-                      <label class="right-radio">
+                      <label class="right-radio" id="footer-right-radio">
                         <input type="radio" name="kk" />
                         <div class="circle"></div>
                         <span>기업</span>
@@ -531,7 +531,6 @@
             </div>
           </div>
         </div>
-      </footer>
       <!-- Footer  -->
   
 
@@ -540,10 +539,6 @@
    <button onclick="topFunction()" id="toTopBtn" title="Go to top"><img src="./assets/images/fast-forward.svg" alt="Arrow up"></button>
    <!-- Back to top  -->
  
-    
-
-    </div>
-
     <!-- Jquery Js-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- Bootstrap Js-->

@@ -50,8 +50,6 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <section>
             <div class="news-header">
                 <div class="n-container">
                     <div class="header-top">
@@ -151,17 +149,18 @@
                                             <div class="inputs-container-1 ninputs-container-1">
     
                                                 <div class="inputs-1 ninputs-1">
+                                                    <input type="text" id="company-name" class="form-control n-input" placeholder="회사 이름">
                                                     <input type="text" class="form-control n-input" placeholder="성함">
-                                                    <input type="password" class="form-control n-input"
+                                                    <input type="number" class="form-control n-input"
                                                         placeholder="핸드폰 번호">
     
                                                     <div class="form-box">
-                                                        <label>
+                                                        <label id="contact-radio-left">
                                                             <input type="radio" name="kk" checked />
                                                             <div class="circle"></div>
                                                             <span>투자자</span>
                                                         </label>
-                                                        <label class="right-radio">
+                                                        <label class="right-radio" id="contact-radio-right">
                                                             <input type="radio" name="kk" />
                                                             <div class="circle"></div>
                                                             <span>기업</span>
@@ -171,7 +170,19 @@
     
                                                 <div class="ntextarea-wrapper"><textarea name="" id="" rows="8"
                                                         class="textarea form-control n-textarea"
-                                                        placeholder="문의하실 내용을 남겨주세요."></textarea></div>
+                                                        placeholder="문의하실 내용을 남겨주세요."></textarea>
+                                                        <div class="filefieldwrapper">
+                                                            <div class="file-upload-wrapper" data-text="">
+                                                                <input type="file" name="file-upload-field" class="file-upload-field" value="">
+                                                               
+                                                             </div>
+                                                             <div class="plus-file-wrapper">
+                                                                 <label for="plus-file-input-field"><i class="fa fa-plus-circle" aria-hidden="true"></i></label>
+                                                                 <input type="file" id="plus-file-input-field">
+                                                             </div>
+                                                        </div>
+                                                    </div>
+                                                
                                             </div>
     
                                             <div class="send-btn-container"><button type="submit"
@@ -246,7 +257,7 @@
 
 
             <!-- Footer  -->
-            <footer>
+         
                 <div class="myfooter">
                     <div class="mycontainer">
                         <div class="footer-inner">
@@ -275,22 +286,32 @@
                                 </div>
                                 <div class="right">
                                     <form action="" method="POST">
-                                        <input class="form-control" type="text" placeholder="성함" />
-                                        <input class="form-control" type="text" placeholder="핸드폰 번호" />
+                                        <div id="footer-investor">
+                                          <input class="form-control" type="text" placeholder="성함" />
+                                          <input
+                                            class="form-control"
+                                            type="text"
+                                            placeholder="핸드폰 번호"
+                                          />
+                                        </div>
+                                        <div id="footer-company">
+                                          <a href="./contact-us.html">상담문의로 이동</a>
+                                          <p>*클릭하시면 '상담문의'로 이동합니다.</p>
+                                        </div>
                                         <div class="form-box">
-                                            <label>
-                                                <input type="radio" name="kk" checked />
-                                                <div class="circle"></div>
-                                                <span>투자자</span>
-                                            </label>
-                                            <label class="right-radio">
-                                                <input type="radio" name="kk" />
-                                                <div class="circle"></div>
-                                                <span>기업</span>
-                                            </label>
+                                          <label id="footer-left-radio">
+                                            <input type="radio" name="kk" checked />
+                                            <div class="circle"></div>
+                                            <span>투자자</span>
+                                          </label>
+                                          <label class="right-radio" id="footer-right-radio">
+                                            <input type="radio" name="kk" />
+                                            <div class="circle"></div>
+                                            <span>기업</span>
+                                          </label>
                                         </div>
                                         <div class="submit-wrapper">
-                                            <button type="submit" class="submit-btn">문의하기</button>
+                                          <button type="submit" class="submit-btn">문의하기</button>
                                         </div>
                                     </form>
                                     <!-- 투자자 -->
@@ -318,7 +339,6 @@
                         </div>
                     </div>
                 </div>
-            </footer>
             <!-- Footer  -->
 
 
@@ -327,9 +347,6 @@
  <button onclick="topFunction()" id="toTopBtn" title="Go to top"><img src="./assets/images/fast-forward.svg" alt="Arrow up"></button>
  <!-- Back to top  -->
 
-
-
-    </div>
 
     <!-- Jquery Js-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -365,6 +382,26 @@
     <script src="js/custom.js"></script>
 
     <script>
+
+
+// Footer company and investor 
+// var footer_investor = document.getElementById("footer-investor");
+// var footer_company = document.getElementById("footer-company");
+// var footer_left_radio = document.getElementById("footer-left-radio");
+// var footer_right_radio = document.getElementById("footer-right-radio");
+
+
+
+// footer_left_radio.addEventListener('click', function () {
+//     footer_company.style.display="none";
+//     footer_investor.style.display="block";
+// });
+
+// footer_right_radio.addEventListener('click', function () {
+//     footer_investor.style.display="none";
+//     footer_company.style.display="block";
+// });
+// Footer company and investor 
 
         var j = document.getElementsByClassName('copyContact');
 

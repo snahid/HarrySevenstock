@@ -62,7 +62,6 @@
   </head>
 
   <body>
-    <div class="wrapper">
       <section>
         <div class="news-header">
           <div class="n-container">
@@ -456,7 +455,6 @@
       <!-- Recent Posts  -->
 
       <!-- Footer  -->
-      <footer>
         <div class="myfooter">
           <div class="mycontainer">
             <div class="footer-inner">
@@ -489,23 +487,25 @@
                 </div>
                 <div class="right">
                   <form action="" method="POST">
-                    <input
-                      class="form-control"
-                      type="text"
-                      placeholder="성함"
-                    />
-                    <input
-                      class="form-control"
-                      type="text"
-                      placeholder="핸드폰 번호"
-                    />
+                    <div id="footer-investor">
+                      <input class="form-control" type="text" placeholder="성함" />
+                      <input
+                        class="form-control"
+                        type="text"
+                        placeholder="핸드폰 번호"
+                      />
+                    </div>
+                    <div id="footer-company">
+                      <a href="./contact-us.html">상담문의로 이동</a>
+                      <p>*클릭하시면 '상담문의'로 이동합니다.</p>
+                    </div>
                     <div class="form-box">
-                      <label>
+                      <label id="footer-left-radio">
                         <input type="radio" name="kk" checked />
                         <div class="circle"></div>
                         <span>투자자</span>
                       </label>
-                      <label class="right-radio">
+                      <label class="right-radio" id="footer-right-radio">
                         <input type="radio" name="kk" />
                         <div class="circle"></div>
                         <span>기업</span>
@@ -514,7 +514,7 @@
                     <div class="submit-wrapper">
                       <button type="submit" class="submit-btn">문의하기</button>
                     </div>
-                  </form>
+                </form>
                   <!-- 투자자 -->
                   <!-- 기업 -->
                 </div>
@@ -540,15 +540,11 @@
             </div>
           </div>
         </div>
-      </footer>
       <!-- Footer  -->
 
  <!-- Back to top  -->
  <button onclick="topFunction()" id="toTopBtn" title="Go to top"><img src="./assets/images/fast-forward.svg" alt="Arrow up"></button>
  <!-- Back to top  -->
-
-    </div>
-
     <!-- Jquery Js-->
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -585,5 +581,34 @@
     <script src="js/owl.carousel.min.js"></script>
     <!-- Custom Js-->
     <script src="js/custom.js"></script>
+
+    <script>
+       var prevIcon = '<img src="./assets/images/bleft.svg" alt="">';
+      var nextIcon = '<img src="./assets/images/bright.svg" alt="">';
+          $('.blog-carousel').owlCarousel({
+              loop:true,
+              margin:10,
+              nav:true,
+              slideBy: 1,
+              // autoplay: true,
+              autoplayTimeout: 4000,
+              autoplayHoverPause: true,
+              navText:[
+                  prevIcon,
+                  nextIcon
+              ],
+              responsive:{
+                  0:{
+                      items:1
+                  },
+                  600:{
+                      items:1
+                  },
+                  1000:{
+                      items:1
+                  }
+              }
+          })
+    </script>
   </body>
 </html>
